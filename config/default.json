@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://irenadunjic:hermione@irenadevconnector.lk7ol.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtSecret": "mysecrettoken"
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "3086afa59d6d4c8fac98",
+    "githubSecret": "e9aba7d8e8452344209aaeeb991659cb0d28ba7e"
 }
