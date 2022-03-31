@@ -26,12 +26,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       register({
         name,
         email,
-        password
+        password,
       });
     }
   };
 
-  if(isAuthenticated) {
+  if (isAuthenticated) {
     return <Redirect to="dashboard" />;
   }
 
@@ -95,13 +95,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
 });
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  register: PropTypes.func.isRequired
+  register: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, { setAlert, register })(Register);

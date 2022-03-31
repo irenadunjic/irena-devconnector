@@ -1,9 +1,9 @@
 import React, { Fragment, useState, Redirect } from "react";
 import { Link } from "react-router-dom";
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
- 
+
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: "",
@@ -21,7 +21,7 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   // Redirect if logged in
-  if(isAuthenticated) {
+  if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
   }
 
@@ -63,11 +63,11 @@ const Login = ({ login, isAuthenticated }) => {
 
 login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
-}
+  isAuthenticated: PropTypes.bool,
+};
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
 });
 
 export default connect(mapStateToProps, { login })(Login);
