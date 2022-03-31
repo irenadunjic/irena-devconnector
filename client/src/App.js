@@ -1,9 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
@@ -41,7 +37,15 @@ const App = () => {
             <Routes>
               <Route exact path="/register" element={<Register />} />
               <Route exact path="/login" element={<Login />} />
-              <Route exact path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+              <Route
+                exact
+                path="/dashboard"
+                element={
+                  <PrivateRoute>
+                    <Dashboard />
+                  </PrivateRoute>
+                }
+              />
             </Routes>
           </section>
         </Fragment>
